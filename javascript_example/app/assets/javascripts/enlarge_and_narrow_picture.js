@@ -11,8 +11,8 @@ window.onload = function(){
     var endWidth = img.width*1.3; //每次点击后的宽度
     var endHeight = img.height*1.3; //每次点击后的高度
     var maxTimer = setInterval(function(){
-      if(img.width < endWidth){
-        if(img.width < maxWidth){
+      if(img.width<endWidth && img.height<endHeight){
+        if(img.width<maxWidth && img.height<maxHeight){
           img.width = img.width*1.05;
           img.height = img.height*1.05;
         }else{
@@ -36,8 +36,8 @@ window.onload = function(){
     var endWidth = img.width*0.7;
     var endHeight = img.height*0.7;
     var minTimer = setInterval(function(){
-      if(img.width > endWidth){
-        if(img.width > minWidth){
+      if(img.width>endWidth && img.height>endHeight){
+        if(img.width>minWidth && img.height>minHeight){
           img.width = img.width*0.9;
           img.heigth = img.height*0.9;
         }else{
